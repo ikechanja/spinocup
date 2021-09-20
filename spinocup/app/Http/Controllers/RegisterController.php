@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
 {
@@ -20,8 +23,13 @@ class RegisterController extends Controller
      * 
      * @return view
      */
-    public function exeStore()
+    public function exeStore(RegisterRequest $request)
     {
+        // 会員登録のデータを受け取る
+        $inputs = $request->all();
+        // 会員登録
+        User::create($inputs);
+
         \Session::flash('success_msg', 'おめでとうございます。新規会員登録が完了しました。');
         return redirect(route('registerSuccess'));
     }
