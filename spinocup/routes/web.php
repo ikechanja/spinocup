@@ -19,5 +19,8 @@ Route::get('/', function () {
     return view('top');
 });
 
-// 新規会員登録画面
+// 新規会員登録画面表示
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
+
+// 新規会員登録処理
+Route::post('/register/store', [RegisterController::class, 'exeStore'])->name('store');

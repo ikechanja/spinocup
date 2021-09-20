@@ -4,7 +4,7 @@
         <h1 class="register-h1">ようこそ、OMOIDE CHATの世界へ。</h1>
         <p class="register-paragraph-1">チルアウトを忘れずに。</p>
         <div class="inner">
-            <form class="register-form" method="POST">
+            <form class="register-form" method="POST" action="{{route('store')}}">
                 @csrf
                 <p>メールアドレス</p>
                 <input type="email" class="register-input" name="email">
