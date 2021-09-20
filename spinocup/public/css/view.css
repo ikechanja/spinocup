@@ -8,11 +8,13 @@ a.btn_00 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 50px;
-  position: relative;
-  background: #228bc8;
-  border: 1px solid #228bc8;
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  background: #ff0000;
+  border: 1px solid #ff0000;
   box-sizing: border-box;
   padding: 0 25px 0 40px;
   color: #fff;
@@ -38,11 +40,11 @@ a.btn_00:before {
 }
 a.btn_00:hover {
   background: #fff;
-  color: #228bc8;
+  color: #ff0000;
 }
 a.btn_00:hover:before {
-  border-top: 2px solid #228bc8;
-  border-right: 2px solid #228bc8;
+  border-top: 2px solid #ff0000;
+  border-right: 2px solid #ff0000;
 }
 
 
@@ -50,9 +52,11 @@ a.btn_01 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 50px;
-  position: relative;
+  position: absolute;
+  top: 20%;
+  left: 25%;
   background: #228bc8;
   border: 1px solid #228bc8;
   box-sizing: border-box;
@@ -93,9 +97,11 @@ a.btn_02 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 50px;
-  position: relative;
+  position: absolute;
+  top: 40%;
+  left: 25%;
   background: #228bc8;
   border: 1px solid #228bc8;
   box-sizing: border-box;
@@ -136,9 +142,11 @@ a.btn_03 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 50px;
-  position: relative;
+  position: absolute;
+  top: 60%;
+  left: 25%;
   background: #228bc8;
   border: 1px solid #228bc8;
   box-sizing: border-box;
@@ -179,9 +187,11 @@ a.btn_04 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   height: 50px;
-  position: relative;
+  position: absolute;
+  top: 80%;
+  left: 25%;
   background: #228bc8;
   border: 1px solid #228bc8;
   box-sizing: border-box;
