@@ -127,6 +127,7 @@ body{
     text-align: center;
     line-height: 40px;
     text-decoration: none;
+    transition: 0.3s;
 }
 .register-btn{
     margin:20px 0;
@@ -140,4 +141,15 @@ body{
     text-decoration: none;
     background-color: var(--black);
     color:var(--white);
+    transition: 0.3s;
+}
+.login-btn:hover{
+    background-color: var(--black);
+    color:var(--white);
+    transition: 0.3s;
+}
+.register-btn:hover{
+    background-color: var(--white);
+    color:var(--black);
+    transition: 0.3s;
 }
