@@ -13,6 +13,7 @@
                 <input type="password" class="register-input" name="password">
                 <p>プロフィール（簡単にどうぞ）</p>
                 <textarea class="register-textarea" name="profile"></textarea>
+                <input type="submit" class="input-submit" value="新規会員登録">
             </form>
         </div>
     </div>
