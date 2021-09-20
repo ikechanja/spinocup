@@ -36,3 +36,7 @@ Route::get('/groupJH', function () {
 Route::get('/groupU', function () {
     return view('group.groupU');
 });
+
+Route::get('/newgroup', function () {
+    return view('group.newgroup');
+});

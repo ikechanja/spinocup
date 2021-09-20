@@ -5,6 +5,9 @@
 </head>
 <body>
 <section>
+  <a href="newgroup" class="btn_00"><span>新規作成</span></a>
+</section>
+<section>
   <a href="groupE" class="btn_01"><span>小学生用チャット</span></a>
 </section>
 <section>
