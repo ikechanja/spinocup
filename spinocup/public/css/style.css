@@ -192,3 +192,25 @@ body{
     border:none;
     border:solid 1px var(--black);
 }
+/* register-success-wrapper */
+.register-success-wrapper{
+    width:100%;
+    height:100vh;
+    position: relative;
+    top:-20px;
+    background-image: url("/img/register-success.jpg");
+    background-size: cover;
+}
+.register-success-center{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+.register-success-h1{
+    text-align: center;
+    color:var(--white);
+}
