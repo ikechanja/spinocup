@@ -170,6 +170,7 @@ body{
     font-size: 2rem;
     padding:0 1rem;
     outline: none;
+    background-color: var(--white);
 }
 .register-form p{
     margin:2rem 0;
@@ -180,6 +181,7 @@ body{
     outline: none;
     resize: none;
     font-size: 2rem;
+    background-color: var(--white);
 }
 .input-submit{
     width:100%;

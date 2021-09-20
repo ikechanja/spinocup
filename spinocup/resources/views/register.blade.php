@@ -5,6 +5,7 @@
         <p class="register-paragraph-1">チルアウトを忘れずに。</p>
         <div class="inner">
             <form class="register-form" method="POST">
+                @csrf
                 <p>メールアドレス</p>
                 <input type="email" class="register-input" name="email">
                 <p>名前（アルファベットのみ）</p>
