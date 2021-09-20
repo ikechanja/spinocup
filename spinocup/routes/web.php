@@ -18,5 +18,21 @@ Route::get('/', function () {
 });
 
 Route::get('/group', function () {
-    return view('group');
+    return view('group.group');
+});
+
+Route::get('/groupE', function () {
+    return view('group.groupE');
+});
+
+Route::get('/groupJ', function () {
+    return view('group.groupJ');
+});
+
+Route::get('/groupJH', function () {
+    return view('group.groupJH');
+});
+
+Route::get('/groupU', function () {
+    return view('group.groupU');
 });

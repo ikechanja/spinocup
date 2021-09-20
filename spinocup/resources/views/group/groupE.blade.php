@@ -3,8 +3,6 @@
     <title>Hello</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <p>Hello World</p>
-    <p>Hello Laravel</p>
+    <h1>小学生</h1>
 </body>
 </html>
