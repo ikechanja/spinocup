@@ -41,7 +41,7 @@
                 <a class="login-btn" href="#">ログイン&nbsp;></a>
             </div>
             <div class="sign-right">
-                <a class="register-btn" href="#">新規会員登録&nbsp;></a>
+                <a class="register-btn" href="{{ route('register')}}">新規会員登録&nbsp;></a>
             </div>
         </div>
     </div>

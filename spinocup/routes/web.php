@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// トップ画面
 Route::get('/', function () {
     return view('top');
 });
+
+// 新規会員登録画面
+Route::get('/register', [RegisterController::class, 'register'])->name('register');
