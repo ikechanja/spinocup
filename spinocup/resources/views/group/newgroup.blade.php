@@ -33,7 +33,7 @@
             <span class="btn-3d-circle-content">
                 <span class="btn-3d-circle-front">戻る</span>
             </span>
-            <span class="btn-3d-circle-back">↩︎</span>
+            <span class="btn-3d-circle-back">↩  </span>
         </a>
     </body>
 </html>
