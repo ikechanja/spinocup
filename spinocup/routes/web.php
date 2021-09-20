@@ -37,4 +37,6 @@ Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
 Route::post('/login/store', [AuthController::class, 'login'])->name('login');
 
 // ホーム画面
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
