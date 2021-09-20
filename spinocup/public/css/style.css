@@ -156,6 +156,10 @@ body{
     color:var(--black);
     transition: 0.3s;
 }
+.sign-error{
+    font-weight: bold;
+    color:var(--red);
+}
 /* register-wrapper */
 .register-wrapper{
     padding:40px 0;

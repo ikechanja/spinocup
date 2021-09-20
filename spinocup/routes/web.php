@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,9 @@ Route::get('/register', [RegisterController::class, 'register'])->name('register
 
 // 新規会員登録処理
 Route::post('/register/store', [RegisterController::class, 'exeStore'])->name('store');
+
+// ログイン画面
+Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
+
+// ログイン処理
+Route::post('/login/store', [AuthController::class, 'login'])->name('login');
