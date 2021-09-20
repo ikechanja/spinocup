@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,6 @@ Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
 
 // ログイン処理
 Route::post('/login/store', [AuthController::class, 'login'])->name('login');
+
+// ホーム画面
+Route::get('/home', [HomeController::class, 'home'])->name('home');
