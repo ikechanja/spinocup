@@ -16,7 +16,7 @@
     <div class="container">
         <h1>何故、OMOIDE CHATなのか。</h1>
         <div class="about-left">
-
+            <p></p>
         </div>
         <div class="about-right">
 
