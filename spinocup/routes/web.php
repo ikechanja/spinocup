@@ -19,6 +19,9 @@ Route::get('/', function () {
     return view('top');
 });
 
+// 新規会員登録成功表示
+Route::get('/register/success', [RegisterController::class, 'registersuccess'])->name('registersuccess');
+
 // 新規会員登録画面表示
 Route::get('/register', [RegisterController::class, 'register'])->name('register');
 
