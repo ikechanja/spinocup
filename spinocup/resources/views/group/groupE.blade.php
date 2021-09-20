@@ -3,6 +3,9 @@
     <title>Hello</title>
 </head>
 <body>
-    <h1>小学生</h1>
+    <div class = "board">
+
+    </div>
+    <a href="group" class="btn_002_a"><span>一覧に戻る</span></a>
 </body>
 </html>
