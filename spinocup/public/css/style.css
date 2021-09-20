@@ -48,6 +48,9 @@ body{
     font-family: 'Ubuntu', sans-serif;
     line-height: 75px;
 }
+.top-link{
+    text-decoration: none;
+}
 /* top-wrapper */
 .top-wrapper{
     width:100%;

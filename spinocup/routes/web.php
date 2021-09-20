@@ -17,7 +17,7 @@ use App\Http\Controllers\RegisterController;
 // トップ画面
 Route::get('/', function () {
     return view('top');
-});
+})->name('top');
 
 // 新規会員登録成功表示
 Route::get('/register/success', [RegisterController::class, 'registersuccess'])->name('registersuccess');

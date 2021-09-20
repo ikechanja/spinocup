@@ -14,7 +14,9 @@
 <body>
     <header class="top-header">
         <div class="container">
-            <h1 class="top-logo">OMOIDE CHAT</h1>
+            <a class="top-link" href="{{route('top')}}">
+                <h1 class="top-logo">OMOIDE CHAT</h1>
+            </a>
         </div>
     </header>
 </body>
