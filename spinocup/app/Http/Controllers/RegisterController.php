@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\RegisterRequest;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -27,6 +28,9 @@ class RegisterController extends Controller
     {
         // 会員登録のデータを受け取る
         $inputs = $request->all();
+        $password_hash = Hash::make($request['passoword']);
+        $inputs['password'] = $password_hash;
+        dd($inputs);
         // 会員登録
         User::create($inputs);
 
