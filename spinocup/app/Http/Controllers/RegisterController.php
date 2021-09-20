@@ -41,8 +41,15 @@ class RegisterController extends Controller
         $password_hash = Hash::make($request['passoword']);
         $inputs['password'] = $password_hash;
         // 会員登録
-        Register::create($inputs);
-
+        \DB::beginTransaction();
+        try {
+            Register::create($inputs);
+            \DB::commit();
+        } catch (\Throwable $e) {
+            \DB::rollback();
+            \Session::flash('error_msg', 'ユーザーネーム、またはメールアドレスが既に使用されています。');
+            return redirect(route('register'));
+        }
         \Session::flash('success_msg', 'おめでとうございます。新規会員登録が完了しました。');
         return redirect(route('registersuccess'));
     }

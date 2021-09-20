@@ -6,6 +6,11 @@
         <div class="inner">
             <form class="register-form" method="POST" action="{{route('store')}}">
                 @csrf
+                @if(session('error_msg'))
+                <div class="sign-error">
+                    {{session('error_msg')}}
+                </div>
+                @endif
                 <p>メールアドレス</p>
                 @if ($errors->has('email'))
                 <div class="sign-error">
