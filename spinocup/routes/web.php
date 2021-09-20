@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/chat', function () {
     return view('chat');
 });
+
+Route::get('send', [App\Http\Controllers\ChatController::class,'send']);

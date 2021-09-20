@@ -25,6 +25,8 @@ window.Vue = require('vue').default;
 
 Vue.component('message', require('./components/Message.vue').default);
 
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -37,14 +39,24 @@ const app = new Vue({
         message:'',
         chat:{
          message:[]
-        }
-       },
-       methods:{
+        },
+    },
+       
+    methods:{
         send(){
          if(this.message.length !=0){
           this.chat.message.push(this.message);
           this.message = '';
          }
         },
-       }
+    },
+    // mounted(){
+    //     console.log("test")
+    //     window.Echo.private('chat')
+    //     .listen('ChatEvent', (e) => {
+    //         console.log("test/////")
+    //         console.log(e);
+    //     });
+    // }
 });
+
