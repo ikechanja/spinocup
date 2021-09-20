@@ -32,3 +32,17 @@
         </div>
     </div>
 </section>
+<section class="sign-wrapper">
+    <div class="container">
+        <h1 class="sign-h1">さぁ。OMOIDEの扉を開きましょう。</h1>
+        <p class="sign-paragraph-1">何も考える事はありません。リラックスして、この世界を楽しみましょう。</p>
+        <div class="sign-flex">
+            <div class="sign-left">
+                <a class="login-btn" href="#">ログイン&nbsp;></a>
+            </div>
+            <div class="sign-right">
+                <a class="register-btn" href="#">新規会員登録&nbsp;></a>
+            </div>
+        </div>
+    </div>
+</section>
