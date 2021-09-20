@@ -5,6 +5,7 @@
             <h1 class="login-h1">お帰りなさい。さぁ、OMOIDEを話そう</h1>
             <p class="login-paragraph-1">チルアウトを忘れずに。</p>
             <form class="login-form" method="POST" action="{{route('login')}}">
+                @csrf
                 <p>メールアドレス</p>
                 <input class="login-input" type="email" name="email">
                 <p>パスワード</p>
