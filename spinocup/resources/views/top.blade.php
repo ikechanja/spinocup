@@ -12,3 +12,14 @@
         </div>
     </div>
 </section>
+<section class="about-wrapper">
+    <div class="container">
+        <h1>何故、OMOIDE CHATなのか。</h1>
+        <div class="about-left">
+
+        </div>
+        <div class="about-right">
+
+        </div>
+    </div>
+</section>
