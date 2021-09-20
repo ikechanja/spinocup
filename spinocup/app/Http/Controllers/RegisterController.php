@@ -15,4 +15,14 @@ class RegisterController extends Controller
     {
         return view('register');
     }
+    /**
+     * 会員登録処理
+     * 
+     * @return view
+     */
+    public function exeStore()
+    {
+        \Session::flash('success_msg', 'おめでとうございます。新規会員登録が完了しました。');
+        return redirect(route('registerSuccess'));
+    }
 }
