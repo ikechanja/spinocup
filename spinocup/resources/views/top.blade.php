@@ -15,11 +15,20 @@
 <section class="about-wrapper">
     <div class="container">
         <h1>何故、OMOIDE CHATなのか。</h1>
-        <div class="about-left">
-            <p></p>
-        </div>
-        <div class="about-right">
-
+        <div class="about-flex">
+            <div class="about-left">
+                <p class="about-paragraph">
+                    学生は、常にチルアウトする事が大切だと考えています。勉強に励む事は大事ですが、時には休憩が必要です。
+                    夏休みは、学生の身体と心を育成する大切な期間です。
+                </p>
+            </div>
+            <div class="about-right">
+                <p class="about-paragraph">
+                    夏休みを利用して、様々な経験を積まれてきたと思います。
+                    その経験談を、全国の学生達と共有しませんか？
+                    OMOIDE CHATはそのお手伝いをします。
+                </p>
+            </div>
         </div>
     </div>
 </section>
