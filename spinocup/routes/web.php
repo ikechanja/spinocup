@@ -51,15 +51,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/profile/edit/{id}', [HomeController::class, 'update_profile'])->name('update_profile');
     // プロフィール更新処理
     Route::post('/profile/update', [HomeController::class, 'exeUpdate'])->name('update');
+
+    Route::get('/chat', function () {
+        return view('chat');
+    });
+
+    Route::post('send', [App\Http\Controllers\ChatController::class, 'send']);
+
+    // Route::post('/readmes', [MessageController::class, 'readmes'])->name('readmes');
+    Route::get('/readmes', [MessageController::class, 'readmes'])->name('readmes');
+
+    Route::post('/writemes', [MessageController::class, 'writemes'])->name('writemes');
 });
-
-Route::get('/chat', function () {
-    return view('chat');
-});
-
-Route::post('send', [App\Http\Controllers\ChatController::class, 'send']);
-
-// Route::post('/readmes', [MessageController::class, 'readmes'])->name('readmes');
-Route::get('/readmes', [MessageController::class, 'readmes'])->name('readmes');
-
-Route::post('/writemes', [MessageController::class, 'writemes'])->name('writemes');
