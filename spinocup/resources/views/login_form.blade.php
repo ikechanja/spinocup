@@ -7,6 +7,11 @@
             <form class="login-form" method="POST" action="{{route('login')}}">
                 @csrf
                 <p>メールアドレス</p>
+                @if ($errors->has('notMatch'))
+                <div class="sign-error">
+                    {{ $errors->first('notMatch') }}
+                </div>
+                @endif
                 @if ($errors->has('email'))
                 <div class="sign-error">
                     {{ $errors->first('email') }}

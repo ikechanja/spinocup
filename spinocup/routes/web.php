@@ -16,31 +16,34 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// トップ画面
-Route::get('/', function () {
-    return view('top');
-})->name('top');
+Route::group(['middleware' => ['guest']], function () {
+    // トップ画面
+    Route::get('/', function () {
+        return view('top');
+    })->name('top');
 
-// 新規会員登録成功表示
-Route::get('/register/success', [RegisterController::class, 'registersuccess'])->name('registersuccess');
+    // 新規会員登録成功表示
+    Route::get('/register/success', [RegisterController::class, 'registersuccess'])->name('registersuccess');
 
-// 新規会員登録画面表示
-Route::get('/register', [RegisterController::class, 'register'])->name('register');
+    // 新規会員登録画面表示
+    Route::get('/register', [RegisterController::class, 'register'])->name('register');
 
-// 新規会員登録処理
-Route::post('/register/store', [RegisterController::class, 'exeStore'])->name('store');
+    // 新規会員登録処理
+    Route::post('/register/store', [RegisterController::class, 'exeStore'])->name('store');
 
-// ログイン画面
-Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
+    // ログイン画面
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
 
-// ログイン処理
-Route::post('/login/store', [AuthController::class, 'login'])->name('login');
+    // ログイン処理
+    Route::post('/login/store', [AuthController::class, 'login'])->name('login');
+});
+Route::group(['middleware' => ['auth']], function () {
+    // ホーム画面
+    Route::get('/home', function () {
+        return view('home');
+    })->name('home');
 
-// ホーム画面
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});

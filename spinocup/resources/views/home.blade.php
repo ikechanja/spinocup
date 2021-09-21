@@ -8,6 +8,10 @@
             </div>
             @endif
             <p>お帰りなさい！{{Auth::user()->name}}</p>
+            <form action="{{route('logout')}}" method="POST">
+                @csrf
+                <button>ログアウト</button>
+            </form>
         </div>
     </div>
 </section>
