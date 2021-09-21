@@ -29,8 +29,8 @@ Route::get('/groupJ', function () {
     return view('group.groupJ');
 });
 
-Route::get('/groupJH', function () {
-    return view('group.groupJH');
+Route::get('/groupH', function () {
+    return view('group.groupH');
 });
 
 Route::get('/groupU', function () {

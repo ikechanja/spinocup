@@ -26,7 +26,7 @@
       </a>
     </section>
     <section>
-      <a href="groupJH" class="btn_03">
+      <a href="groupH" class="btn_03">
         <span class="btn-3d-circle-content">
           <span class="btn-3d-circle-front"></span>
         </span>
@@ -43,7 +43,7 @@
     </section>
     <p class = "E">Elementary school students</p>
     <p class = "J">Junior high school students</p>
-    <p class = "JH">High school students</p>
+    <p class = "H">High school students</p>
     <p class = "U">University students</p>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 <body>
     <header class="topNavigation">
-       <p>Boad for Elementary school students</p>
+       <p>Boad for High school students</p>
        <div class="wrap">
            <button class="button1" onclick="location.href='group'">戻る</button>
         </div>
