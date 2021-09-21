@@ -18,5 +18,6 @@ class ChatController extends Controller
         $user=User::find(1);
         //$message = 'Hello';
         event(new ChatEvent($request->message,$user));
+        
        }
 }

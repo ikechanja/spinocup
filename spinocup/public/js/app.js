@@ -5289,6 +5289,22 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
         });
       }
     }
+  },
+  mounted: function mounted() {
+    console.log("tests"); // Enable pusher logging - don't include this in production
+    //     Pusher = window.Pusher;
+    //     Pusher.logToConsole = true;
+    //     var pusher = new Pusher('5860cc0ba59b0e5a95ee', {
+    //     cluster: 'ap3'
+    //     });
+    //     var channel = pusher.subscribe('my-channel');
+    //     channel.bind('my-event', function(data1) {
+    //     //alert(JSON.stringify(data));
+    //     datas = JSON.stringify(data1);
+    //     alert(datas);
+    //     jsondata = JSON.parse(datas);
+    //     console.log(jsondata.message);
+    // });
   } // mounted(){
   //     window.Echo.private('my-channel')
   //     .listen('my-event', (e) => {
