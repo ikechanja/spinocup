@@ -32,16 +32,18 @@
             <td>名前</td>
             <td>メッセージ</td>
         </tr>
-    </thead>
+</thead>
     <tbody>
+    @for($i=0;$i<= count($messageall)-1;$i++)
         <tr>
-            <td>鈴木</td>
-            <td>Hello!</td>
+            <td>{{$messageall[$i]->user->name}}</td>
+            <td>{{$messageall[$i]->message}}</td>
         </tr>
-    <tbody>
+        @endfor
+    </tbody>
     </table>
     </ul>
-    <input type="text" class="form-control" placeholder="Type your message here.." v-model='message' @keyup.enter='send'>
+    <input type="text" class="form-control" placeholder="Type your message here.." v-model='message' @keyup.enter='send' id="form1">
    </div>
   </div>
  </div>
@@ -49,6 +51,9 @@
 </body>
 <script>
     src="{{ asset('js/app.js') }}"
+
+    //const usename = ''
+
     window.Pusher = Pusher;
 
     // Enable pusher logging - don't include this in production

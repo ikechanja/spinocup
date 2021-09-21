@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,7 @@ Route::get('/chat', function () {
 
 Route::post('send', [App\Http\Controllers\ChatController::class, 'send']);
 
-Route::post('/message/read');
+// Route::post('/readmes', [MessageController::class, 'readmes'])->name('readmes');
+Route::get('/readmes', [MessageController::class, 'readmes'])->name('readmes');
 
-Route::post('/message/write');
+Route::post('/writemes', [MessageController::class, 'writemes'])->name('writemes');

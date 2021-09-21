@@ -42,4 +42,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [];
+
+    public function message(){
+        return $this->hasMany(Massage::class);
+    }    
 }

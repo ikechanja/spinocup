@@ -54,9 +54,8 @@ const app = new Vue({
              })
              .then(function (response){
                console.log(response);
-               this.message = '';
-                // var textarea = document.getElementById("form1");
-                // textarea.value ="";
+                var textarea = document.getElementById("form1");
+                textarea.value ="";
              })
              .catch(function(error) {
                console.log(error);
