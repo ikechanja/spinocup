@@ -27,8 +27,13 @@ class MessageController extends Controller
         return view('chat',['messageall' => $messageall]);
     }
 
-    public function writemes(){
-        $message = Message::user()->all();
-        return view('chat',['message' => $message]);
-    }
+    // public function writemes(Request $request){
+    //     $user = Auth::user();
+    //     $message = $request->input('comment');
+    //     Message::create([
+    //     'login_id' => $user->id,
+    //     'comment' => $message
+    // ]);
+    // return redirect()->route('home');
+    // }
 }
