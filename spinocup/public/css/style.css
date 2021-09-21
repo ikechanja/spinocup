@@ -48,6 +48,9 @@ body{
     font-family: 'Ubuntu', sans-serif;
     line-height: 75px;
 }
+.top-link{
+    text-decoration: none;
+}
 /* top-wrapper */
 .top-wrapper{
     width:100%;
@@ -152,4 +155,96 @@ body{
     background-color: var(--white);
     color:var(--black);
     transition: 0.3s;
+}
+.sign-error{
+    font-weight: bold;
+    color:var(--red);
+}
+/* register-wrapper */
+.register-wrapper{
+    padding:40px 0;
+}
+.register-h1{
+    text-align: center;
+}
+.register-paragraph-1{
+    text-align: center;
+}
+.register-input{
+    border:none;
+    border-bottom: solid 1px var(--black);
+    width: 100%;
+    font-size: 2rem;
+    padding:0 1rem;
+    outline: none;
+    background-color: var(--white);
+}
+.register-form p{
+    margin:2rem 0;
+}
+.register-textarea{
+    width:100%;
+    height:300px;
+    outline: none;
+    resize: none;
+    font-size: 2rem;
+    background-color: var(--white);
+}
+.input-submit{
+    width:100%;
+    height:2.5rem;
+    background-color: var(--black);
+    color:var(--white);
+    margin:2rem 0;
+    border:none;
+    border:solid 1px var(--black);
+}
+/* register-success-wrapper */
+.register-success-wrapper{
+    width:100%;
+    height:100vh;
+    position: relative;
+    top:-20px;
+    background-image: url("/img/register-success.jpg");
+    background-size: cover;
+}
+.register-success-center{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+.register-success-h1{
+    text-align: center;
+    color:var(--white);
+}
+/* login-wrapper */
+.login-h1{
+    text-align: center;
+}
+.login-paragraph-1{
+    text-align: center;
+}
+.login-input{
+    width:100%;
+    height:2rem;
+    border:none;
+    border-bottom:solid 1px var(--black);
+    background-color: var(--white);
+    outline: none;
+}
+.login-form p{
+    margin:2rem 0;
+}
+.login-submit{
+    width:100%;
+    height:2.5rem;
+    background-color: var(--white);
+    color:var(--black);
+    margin:2rem 0;
+    border:none;
+    border:solid 1px var(--black);
 }

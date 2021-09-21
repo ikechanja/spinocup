@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+
 import Vue from 'vue'
 import VueChatScroll from 'vue-chat-scroll'
 Vue.use(VueChatScroll)
@@ -26,7 +27,6 @@ import axios from 'axios';
 
 
 Vue.component('message', require('./components/Message.vue').default);
-
 
 
 /**
@@ -95,6 +95,3 @@ const app = new Vue({
     // }
     
 });
-
-
-
