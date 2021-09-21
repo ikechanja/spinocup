@@ -53,9 +53,9 @@ Route::get('/chat', function () {
     return view('chat');
 });
 
-Route::post('send', [App\Http\Controllers\ChatController::class,'send']);
+// Route::post('send', [App\Http\Controllers\ChatController::class,'send']);
 
-Route::post('/readmes', [MessageController::class, 'readmes'])->name('readmes');
+// Route::post('/readmes', [MessageController::class, 'readmes'])->name('readmes');
 Route::get('/readmes', [MessageController::class, 'readmes'])->name('readmes');
 
 Route::post('/writemes', [MessageController::class, 'writemes'])->name('writemes');
