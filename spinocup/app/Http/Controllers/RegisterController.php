@@ -38,7 +38,8 @@ class RegisterController extends Controller
     {
         // 会員登録のデータを受け取る
         $inputs = $request->all();
-        $password_hash = Hash::make($request['passoword']);
+        // $password_hash = Hash::make($request['password']);
+        $password_hash = bin2hex($request['password']);
         $inputs['password'] = $password_hash;
         // 会員登録
         \DB::beginTransaction();

@@ -10,6 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    use HasFactory;
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -17,7 +18,8 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-
+    // テーブル名
+    protected $table = 'users';
     protected $fillable = [
         'email',
         'name',
@@ -30,7 +32,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = [
+        'password',
+    ];
 
     /**
      * The attributes that should be cast.
