@@ -33,7 +33,7 @@
      </message> -->
      <table id="targetTable">
     <tbody>
-    @for($i=0;$i<= count($messageall)-1;$i++)
+    @for($i=0;$i<= is_countable($messageall)-1;$i++)
         <tr>
             <td>{{$messageall[$i]->user->name}}</td>
             <td>{{$messageall[$i]->message}}</td>

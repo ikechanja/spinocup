@@ -22,8 +22,8 @@ class MessageController extends Controller
         $this->middleware('auth');
     }
 
-    public function readmes(){
-        $messageall = Message::with('user')->get();
+    public function readmes($event){
+        $messageall = Message::find($event);
         return view('chat',['messageall' => $messageall]);
     }
 

@@ -21,7 +21,7 @@
                 @foreach($rooms as $room)
                 <tr>
                     <th>{{ $room->id }}</th>
-                    <td data-label="title" class="txt"><a href="groupH">{{ $room->title }}<a></td>
+                    <td data-label="title" class="txt"><a href="/readmes/{{$room->title}}">{{ $room->title }}<a></td>
                     <td data-label="data" class="txt">{{ $room->updated_at }}</td>
                 </tr>
                 @endforeach
