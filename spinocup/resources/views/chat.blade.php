@@ -5,6 +5,7 @@
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pusher Test</title>
   <meta name="csrf-token" content="{{csrf_token()}}">
+  <link rel="stylesheet" type="text/css" href="css/chat.css">
  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
   
