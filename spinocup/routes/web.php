@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/group', function () {
+
+
+Route::get('group', function () {
     return view('group.group');
-});
+})->name('group');
 
 Route::get('/groupE', function () {
     return view('group.groupE');
@@ -40,3 +40,7 @@ Route::get('/groupU', function () {
 Route::get('/newgroup', function () {
     return view('group.newgroup');
 });
+
+Route::post('/store', [RoomController::class,'exeStore'])->name('store');
+
+
