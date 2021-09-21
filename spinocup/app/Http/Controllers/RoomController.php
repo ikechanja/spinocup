@@ -10,9 +10,28 @@ use App\Http\Requests\RoomRequest;
 class RoomController extends Controller
 {
     //
-    public function showList()
+    public function showList1()
     {
-        return view('room.list');
+        $rooms = Room::where('class','小学生')->get();
+        return view('room.list',['rooms' => $rooms]);
+    }
+
+    public function showList2()
+    {
+        $rooms = Room::where('class','中学生')->get();
+        return view('room.list',['rooms' => $rooms]);
+    }
+
+    public function showList3()
+    {
+        $rooms = Room::where('class','高校生')->get();
+        return view('room.list',['rooms' => $rooms]);
+    }
+
+    public function showList4()
+    {
+        $rooms = Room::where('class','大学生')->get();
+        return view('room.list',['rooms' => $rooms]);
     }
 
     public function exeStore(Request $request)

@@ -42,5 +42,9 @@ Route::get('/newgroup', function () {
 });
 
 Route::post('/store', [RoomController::class,'exeStore'])->name('store');
+Route::get('/list1', [RoomController::class,'showList1'])->name('list1');
+Route::get('/list2', [RoomController::class,'showList2'])->name('list2');
+Route::get('/list3', [RoomController::class,'showList3'])->name('list3');
+Route::get('/list4', [RoomController::class,'showList4'])->name('list4');
 
 

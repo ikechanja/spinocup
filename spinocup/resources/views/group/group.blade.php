@@ -10,7 +10,7 @@
     <button class="button1" onclick="location.href='newgroup'">新規作成</button>
   </div>
   <section>
-    <a href="groupE" class="btn_01">
+    <a href="list1" class="btn_01">
       <span class="btn-3d-circle-content">
         <span class="btn-3d-circle-front"></span>
       </span>
@@ -18,7 +18,7 @@
     </a>
   </section>
   <section>
-    <a href="groupJ" class="btn_02">
+    <a href="list2" class="btn_02">
         <span class="btn-3d-circle-content">
           <span class="btn-3d-circle-front"></span>
         </span>
@@ -26,7 +26,7 @@
       </a>
     </section>
     <section>
-      <a href="groupH" class="btn_03">
+      <a href="list3" class="btn_03">
         <span class="btn-3d-circle-content">
           <span class="btn-3d-circle-front"></span>
         </span>
@@ -34,7 +34,7 @@
       </a>
     </section>
     <section>
-      <a href="groupU" class="btn_04">
+      <a href="list4" class="btn_04">
         <span class="btn-3d-circle-content">
           <span class="btn-3d-circle-front"></span>
         </span>
