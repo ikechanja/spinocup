@@ -47,3 +47,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
+
+Route::get('/chat', function () {
+    return view('chat');
+});
+
+Route::post('send', [App\Http\Controllers\ChatController::class,'send']);
