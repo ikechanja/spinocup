@@ -5,4 +5,30 @@
     padding:0;
     color:#212121;
 }
-
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+.app{
+    height: 100%;
+}
+.contents{
+    height: 100%;
+}
+.top-left{
+    float:left;
+    float: 100%;
+    width: 35%;
+}
+.top-right{
+    float:right;
+    height: 85%;;
+    width: 65%;
+}
+.logo-top{
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 75px;
+    text-align: center;
+}
