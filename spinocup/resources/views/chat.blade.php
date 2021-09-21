@@ -17,22 +17,21 @@
     Try publishing an event to channel <code>my-channel</code>
     with event name <code>my-event</code>.
   </p> -->
-  <div class="container">
-  <div class="row" id="app">
-   <h1>Chat room</h1>
-   <div class="offset-4 col-md-4">
-    <li class="list-group-item active">Chat</li>
+  
+  <div class="app">
+  <div class="contents">
+  <div class="top-left">
+      <div class="top-logo1">
+        <h1 class="logo-top">OMOIDE CHAT</h1>
+      </div>
+  </div>
+   <div class="top-right">
+    <li class="list-group-item active"># Chat room</li>
     <ul class="list-group">
      <!-- <message v-for="value in chat.message">
       @{{value}}
      </message> -->
      <table id="targetTable">
-     <thead>
-        <tr>
-            <td>名前</td>
-            <td>メッセージ</td>
-        </tr>
-</thead>
     <tbody>
     @for($i=0;$i<= count($messageall)-1;$i++)
         <tr>
@@ -87,6 +86,6 @@
    <style>
   .list-group{
    overflow-y: scroll;
-   height: 200px;
+   height: 100%;
   }
  </style>

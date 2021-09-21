@@ -26,7 +26,7 @@ class ChatController extends Controller
         'message' => $message
         ]);
 
-        event(new ChatEvent($request->message,$user));
+        event(new ChatEvent($request->message,$user,1,1));
 
         return redirect()->route('home');
        }
