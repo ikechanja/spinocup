@@ -53,3 +53,7 @@ Route::get('/chat', function () {
 });
 
 Route::post('send', [App\Http\Controllers\ChatController::class,'send']);
+
+Route::post('/message/read');
+
+Route::post('/message/write');
