@@ -18,6 +18,8 @@ class CreateMessagesTable extends Migration
 
             $table->integer('user_id');
             $table->text('message');
+            $table->text('channel');
+            $table->text('event');
 
             $table->timestamps();
         });
