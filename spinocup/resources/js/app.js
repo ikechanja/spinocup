@@ -11,6 +11,8 @@ Vue.use(VueChatScroll)
 
 window.Vue = require('vue').default;
 
+import axios from 'axios';
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -44,19 +46,34 @@ const app = new Vue({
        
     methods:{
         send(){
-         if(this.message.length !=0){
-          this.chat.message.push(this.message);
-          this.message = '';
-         }
+            if(this.message.length !=0){
+            //console.log(this.message);
+             this.chat.message.push(this.message);
+             axios.post('/send', {
+              message: this.message
+             })
+             .then(function (response){
+               console.log(response);
+               this.message = '';
+                // var textarea = document.getElementById("form1");
+                // textarea.value ="";
+             })
+             .catch(function(error) {
+               console.log(error);
+             });
+            }
         },
     },
+    mounted(){
+        axios.post('/')
+    }
     // mounted(){
-    //     console.log("test")
-    //     window.Echo.private('chat')
-    //     .listen('ChatEvent', (e) => {
-    //         console.log("test/////")
+    //     window.Echo.private('my-channel')
+    //     .listen('my-event', (e) => {
     //         console.log(e);
+    //         this.chat.message.push(e.message);
     //     });
     // }
+    
 });
 
