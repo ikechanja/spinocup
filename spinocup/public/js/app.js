@@ -5282,8 +5282,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
           message: this.message
         }).then(function (response) {
           console.log(response);
-          this.message = ''; // var textarea = document.getElementById("form1");
-          // textarea.value ="";
+          var textarea = document.getElementById("form1");
+          textarea.value = "";
         })["catch"](function (error) {
           console.log(error);
         });

@@ -41,7 +41,7 @@
     <tbody>
     </table>
     </ul>
-    <input type="text" class="form-control" placeholder="Type your message here.." v-model='message' @keyup.enter='send'>
+    <input type="text" class="form-control" placeholder="Type your message here.." v-model='message' @keyup.enter='send' id="form1">
    </div>
   </div>
  </div>
