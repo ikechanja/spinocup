@@ -231,6 +231,7 @@ body{
 .login-input{
     width:100%;
     height:2rem;
+    font-size: 2rem;
     border:none;
     border-bottom:solid 1px var(--black);
     background-color: var(--white);
@@ -247,4 +248,14 @@ body{
     margin:2rem 0;
     border:none;
     border:solid 1px var(--black);
+}
+/* loout-btn */
+.logout-btn{
+    width:100%;
+    height:40px;
+    background-color: var(--black);
+    color:var(--white);
+    border:none;
+    border:solid 1px var(--black);
+    margin:2rem 0;
 }

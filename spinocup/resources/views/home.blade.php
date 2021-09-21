@@ -10,7 +10,7 @@
             <p>お帰りなさい！{{Auth::user()->name}}</p>
             <form action="{{route('logout')}}" method="POST">
                 @csrf
-                <button>ログアウト</button>
+                <button class="logout-btn">ログアウト</button>
             </form>
         </div>
     </div>
