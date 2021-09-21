@@ -44,15 +44,19 @@ Route::group(['middleware' => ['auth']], function () {
     })->name('home');
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+    // ログアウト処理
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    // プロフィール更新画面
+    Route::get('/profile/edit/{id}', [HomeController::class, 'update_profile'])->name('update_profile');
+    // プロフィール更新処理
+    Route::post('/profile/update', [HomeController::class, 'exeUpdate'])->name('update');
 });
 
 Route::get('/chat', function () {
     return view('chat');
 });
 
-Route::post('send', [App\Http\Controllers\ChatController::class,'send']);
+Route::post('send', [App\Http\Controllers\ChatController::class, 'send']);
 
 Route::post('/message/read');
 
