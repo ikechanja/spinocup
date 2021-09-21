@@ -8,6 +8,7 @@
  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
   <script>
+    src="{{ asset('js/app.js') }}"
 
     // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true;
@@ -18,7 +19,12 @@
 
     var channel = pusher.subscribe('my-channel');
     channel.bind('my-event', function(data) {
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
+      datas = JSON.stringify(data);
+      alert(datas);
+      jsondata = JSON.parse(datas);
+      console.log(jsondata.message);
+      
     });
   </script>
    <style>
