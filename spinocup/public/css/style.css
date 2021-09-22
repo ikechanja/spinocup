@@ -287,3 +287,24 @@ body{
     font-weight: bold;
     color:var(--green);
 }
+.chat-header{
+    background-color: var(--green) !important;
+    border:solid 1px var(--green) !important;
+    margin-bottom: 20px !important;
+}
+.chat-wrapper{
+    margin-left: 0 !important;
+    width:100% !important;
+}
+#targetTable{
+    font-size: 18px !important;
+    line-height: 1.8rem !important;
+}
+.list-group{
+    height: 80% !important;
+}
+@media screen and (max-width: 480px) {
+    .list-group{
+        height: 70% !important;
+    }
+}
