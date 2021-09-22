@@ -23,10 +23,10 @@ class ChatController extends Controller
         $message = $request->message;
         Message::create([
         'user_id' => $user->id,
-        'message' => $message
+        'message' => $message,
         ]);
 
-        event(new ChatEvent($request->message,$user,1,1));
+        event(new ChatEvent($request->message,$user));
 
         return redirect()->route('home');
        }

@@ -22,10 +22,13 @@ class MessageController extends Controller
         $this->middleware('auth');
     }
 
-    public function readmes(){
-        $messageall = Message::with('user')->get();
+    public function readmes($event){
+        $messageall = Message::get();
         return view('chat',['messageall' => $messageall]);
     }
+
+    //find($event)
+    //with('user')->get()
 
     // public function writemes(Request $request){
     //     $user = Auth::user();

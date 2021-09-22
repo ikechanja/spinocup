@@ -81,10 +81,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('send', [App\Http\Controllers\ChatController::class, 'send']);
 
     // Route::post('/readmes', [MessageController::class, 'readmes'])->name('readmes');
-    Route::get('/readmes', [MessageController::class, 'readmes'])->name('readmes');
+    Route::get('/readmes/{event}', [MessageController::class, 'readmes'])->name('readmes');
 
     Route::post('/writemes', [MessageController::class, 'writemes'])->name('writemes');
 });
+
+Route::group(['prefix'=> '/', 'middleware'=>'auth'],function(){
+    Route::get('chat', [App\Http\Controllers\ChatController::class,'chat']);
+   });
 
 Route::get('/groupU', function () {
     return view('group.groupU');
