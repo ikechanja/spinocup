@@ -13,6 +13,9 @@
             <input type="text" name ='word' size="25" placeholder="　キーワード検索">
             <input type="submit" value="検索">
         </form>
+
+        <button class="button1" onclick="location.href='list1'" >条件をリセット</button>
+
         <table>
             <thead>
                 <tr>
@@ -45,7 +48,3 @@
 </div>
 </body>
 </html>
-
-
-
-

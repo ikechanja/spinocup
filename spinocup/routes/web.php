@@ -94,9 +94,14 @@ Route::get('/newgroup', function () {
     return view('group.newgroup');
 });
 
-Route::post('/store', [RoomController::class,'exeStore'])->name('store');
+Route::post('/store', [RoomController::class,'exeStore'])->name('roomstore');
 Route::get('/list1', [RoomController::class,'showList1'])->name('list1');
 Route::get('/list2', [RoomController::class,'showList2'])->name('list2');
 Route::get('/list3', [RoomController::class,'showList3'])->name('list3');
 Route::get('/list4', [RoomController::class,'showList4'])->name('list4');
+
+Route::get('/list11', [RoomController::class,'showList11'])->name('list11');
+Route::get('/list12', [RoomController::class,'showList12'])->name('list12');
+Route::get('/list13', [RoomController::class,'showList13'])->name('list13');
+Route::get('/list14', [RoomController::class,'showList14'])->name('list14');
 

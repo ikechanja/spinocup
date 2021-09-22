@@ -8,11 +8,14 @@
 <body>
 <div>
     <div>
-        <form  method="get"  action="{{route('list11')}}" class="search_container">
+        <form  method="get"  action="{{route('list12')}}" class="search_container">
         @csrf
             <input type="text" name ='word' size="25" placeholder="　キーワード検索">
             <input type="submit" value="検索">
         </form>
+
+        <button class="button1" onclick="location.href='list2'" >条件をリセット</button>
+
         <table>
             <thead>
                 <tr>
@@ -45,7 +48,3 @@
 </div>
 </body>
 </html>
-
-
-
-
