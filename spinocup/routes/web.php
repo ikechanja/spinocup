@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\RoomController; 
+use App\Http\Controllers\RoomController;
 
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AuthController;
@@ -86,9 +86,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/writemes', [MessageController::class, 'writemes'])->name('writemes');
 });
 
-Route::group(['prefix'=> '/', 'middleware'=>'auth'],function(){
-    Route::get('chat', [App\Http\Controllers\ChatController::class,'chat']);
-   });
+Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
+    Route::get('chat', [App\Http\Controllers\ChatController::class, 'chat']);
+});
 
 Route::get('/groupU', function () {
     return view('group.groupU');
@@ -98,9 +98,8 @@ Route::get('/newgroup', function () {
     return view('group.newgroup');
 });
 
-Route::post('/store', [RoomController::class,'exeStore'])->name('store');
-Route::get('/list1', [RoomController::class,'showList1'])->name('list1');
-Route::get('/list2', [RoomController::class,'showList2'])->name('list2');
-Route::get('/list3', [RoomController::class,'showList3'])->name('list3');
-Route::get('/list4', [RoomController::class,'showList4'])->name('list4');
-
+Route::post('/store', [RoomController::class, 'exeStore'])->name('roomstore');
+Route::get('/list1', [RoomController::class, 'showList1'])->name('list1');
+Route::get('/list2', [RoomController::class, 'showList2'])->name('list2');
+Route::get('/list3', [RoomController::class, 'showList3'])->name('list3');
+Route::get('/list4', [RoomController::class, 'showList4'])->name('list4');
