@@ -32,18 +32,18 @@
    <h1>Chat room</h1>
    <div class="offset-3 col-md-9">
     <li class="list-group-item active">Chat</li>
-    <ul class="list-group"> 
+    <ul class="list-group" id="list"> 
      <!-- <message v-for="value in chat.message">
       @{{value}}
      </message> -->
      <table id="targetTable">
     <tbody>
-        @for($i=0;$i<= 20;$i++)
+        @foreach($messageall as $value)
         <tr>
-            <td>{{$messageall[$i]->user->name}}</td>
-            <td>{{$messageall[$i]->message}}</td>
+            <td>{{$value->user->name}}</td>
+            <td>{{$value->message}}</td>
         </tr>
-        @endfor
+        @endforeach
     </tbody>
     </table>
     <!-- is_countable($messageall)-1 -->
@@ -87,6 +87,8 @@
       newText = document.createTextNode(jsondata.message);
       newCell.appendChild(newText);
       
+      const list = document.getElementById('list');
+      list.scrollTo(0,list.scrollHeight);
     });
   </script>
    <style>
