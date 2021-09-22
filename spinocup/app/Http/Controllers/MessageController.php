@@ -24,6 +24,8 @@ class MessageController extends Controller
 
     public function readmes($event){
         $messageall = Message::get();
+        //$messageall = array_reverse($messageall);
+        //dd(is_countable($messageall));
         return view('chat',['messageall' => $messageall]);
     }
 

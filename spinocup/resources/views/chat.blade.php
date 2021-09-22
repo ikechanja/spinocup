@@ -29,29 +29,29 @@
   </div>
    <div class="top-right">
     <li class="list-group-item active"># Chat room</li> -->
-  <div class="container">
-    <div class="row" id="app">
-      <h1>OMOIDE Chat Room</h1>
-      <div class="offset-3 col-md-9 chat-wrapper">
-        <li class="list-group-item active chat-header">OMOIDE CHAT</li>
-        <ul class="list-group">
-          <!-- <message v-for="value in chat.message">
+    <div class="container">
+  <div class="row" id="app">
+   <h1>Chat room</h1>
+   <div class="offset-3 col-md-9 chat-wrapper">
+    <li class="list-group-item active chat-header">OMOIDE CHAT</li>
+    <ul class="list-group" id="list"> 
+     <!-- <message v-for="value in chat.message">
       @{{value}}
      </message> -->
-          <table id="targetTable">
-            <tbody>
-              @for($i=0;$i<= 20;$i++) <tr>
-                <td>{{$messageall[$i]->user->name}}</td>
-                <td>{{$messageall[$i]->message}}</td>
-                </tr>
-                @endfor
-            </tbody>
-          </table>
-          <!-- is_countable($messageall)-1 -->
-        </ul>
-        <input type="text" class="form-control" placeholder="Type your message here.." v-model='message' @keyup.enter='send' id="form1">
-      </div>
-    </div>
+     <table id="targetTable">
+    <tbody>
+        @foreach($messageall as $value)
+        <tr>
+            <td>{{$value->user->name}}</td>
+            <td>{{$value->message}}</td>
+        </tr>
+        @endforeach
+    </tbody>
+    </table>
+    <!-- is_countable($messageall)-1 -->
+    </ul>
+    <input type="text" class="form-control" placeholder="Type your message here.." v-model='message' @keyup.enter='send' id="form1">
+   </div>
   </div>
   <script src="{{ asset('js/app.js') }}"></script>
 </body>
@@ -65,6 +65,11 @@
   // Enable pusher logging - don't include this in production
   Pusher.logToConsole = true;
 
+    const list = document.getElementById('list');
+      list.scrollTo(0,list.scrollHeight);
+
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
   var pusher = new Pusher('5860cc0ba59b0e5a95ee', {
     cluster: 'ap3'
   });
