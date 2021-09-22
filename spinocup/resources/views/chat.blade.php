@@ -61,6 +61,9 @@
 
     window.Pusher = Pusher;
 
+    const list = document.getElementById('list');
+      list.scrollTo(0,list.scrollHeight);
+
     // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true;
 
@@ -87,8 +90,6 @@
       newText = document.createTextNode(jsondata.message);
       newCell.appendChild(newText);
       
-      const list = document.getElementById('list');
-      list.scrollTo(0,list.scrollHeight);
     });
   </script>
    <style>
