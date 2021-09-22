@@ -287,3 +287,7 @@ body{
     font-weight: bold;
     color:var(--green);
 }
+.chat-header{
+    background-color: var(--green) !important;
+    border:solid 1px var(--green) !important;
+}
