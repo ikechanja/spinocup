@@ -23,9 +23,12 @@ class MessageController extends Controller
     }
 
     public function readmes($event){
-        $messageall = Message::find($event);
+        $messageall = Message::get();
         return view('chat',['messageall' => $messageall]);
     }
+
+    //find($event)
+    //with('user')->get()
 
     // public function writemes(Request $request){
     //     $user = Auth::user();
