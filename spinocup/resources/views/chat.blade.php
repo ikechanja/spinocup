@@ -31,8 +31,8 @@
     <li class="list-group-item active"># Chat room</li> -->
   <div class="container">
     <div class="row" id="app">
-      <h1>Chat room</h1>
-      <div class="offset-3 col-md-9">
+      <h1>OMOIDE Chat Room</h1>
+      <div class="offset-3 col-md-9 chat-wrapper">
         <li class="list-group-item active chat-header">OMOIDE CHAT</li>
         <ul class="list-group">
           <!-- <message v-for="value in chat.message">
